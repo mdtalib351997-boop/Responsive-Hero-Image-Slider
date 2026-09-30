@@ -1,0 +1,205 @@
+@media (max-width: 1024px) {
+    nav {
+        padding: 14px 32px;
+    }
+
+    nav ul {
+        gap: 26px;
+    }
+
+    .slide-content {
+        max-width: 60vw;
+        bottom: 15vh;
+    }
+
+    .counter {
+        left: calc(7vw + 100px);
+    }
+}
+
+@media (max-width: 860px) {
+    nav {
+        padding: 14px 24px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(75vw, 270px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 26px;
+        padding: 90px 40px;
+        background: rgba(15, 15, 15, 0.9);
+        backdrop-filter: blur(18px);
+        transform: translateX(18px);
+        transition: transform 0.4s ease;
+        z-index: 105;
+    }
+
+    nav ul.open {
+        transform: translateX(0);
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    .slide-content {
+        max-width: 68vw;
+        bottom: 15vh;
+        left: 6vw;
+        right: 6vw;
+    }
+
+    .slide-desc {
+        max-width: 100%;
+    }
+
+    .arrows {
+        left: 6vw;
+        bottom: 4.5vh;
+    }
+
+    .dot-pills {
+        bottom: 5.5vh;
+    }
+
+    .counter {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    nav {
+        padding: 12px 18px;
+    }
+
+    .logo {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .logo-box {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slide-content {
+        max-width: 84vw;
+        bottom: 13vh;
+        left: 6vw;
+        right: 6vw;
+        padding-right: 0;
+    }
+
+    .slide-title,
+    .slide-name {
+        font-size: clamp(34px, 12vw, 56px);
+    }
+
+    .slide-desc {
+        font-size: 13.5px;
+        line-height: 1.65;
+        margin-top: 10px;
+    }
+
+    .slide-btns {
+        margin-top: 18px;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 9px 18px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .arrows {
+        bottom: 3.5vh;
+        gap: 8px;
+    }
+
+    .arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .arrow svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .dot-pills {
+        bottom: 4vh;
+        gap: 5px;
+    }
+
+    .pill {
+        height: 4px;
+        width: 11px;
+    }
+
+    .pill.active {
+        width: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    :root {
+        --content-bottom: 12vh;
+        --fs-title: clamp(26px, 8vh, 48px);
+        --fs-desc: clamp(11px, 2.2vh, 14px);
+    }
+
+    nav {
+        padding: 8px clamp(20px, 6vw, 48px);
+    }
+
+    .slide-content {
+        max-width: 46vw;
+    }
+
+    .slide-desc {
+        display: none;
+    }
+
+    .slide-btns {
+        margin-top: 12px;
+    }
+
+    .arrows {
+        bottom: 1.5vh;
+    }
+
+    .dot-pills {
+        bottom: 2.5vh;
+    }
+
+    .counter {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .slide,
+    .slide-bg,
+    .slide-label,
+    .slide-title,
+    .slide-name,
+    .slide-desc,
+    .slide-btns,
+    .pill,
+    nav ul {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
